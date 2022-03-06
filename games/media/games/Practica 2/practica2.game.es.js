@@ -30,13 +30,11 @@ undum.game.slideUpSpeed = 500
 undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Comienza la historia</h1>\
-        <img src='media/games/tutorial/woodcut1.png' class='float_right'>\
+        <img #paraguas src='media/img/paraguas.png' class='float_right paraguas'>\
         <p>Son las 08:00 am y tienes que ir a clase. Decides vestirte y coger las cosas para clase.</p>\
         \
-        <p>Tu madre te ha dicho que va a llover, puedes coger el <a href='./paraguas' class='once'>paraguas</a>, o bien tienes prisa y haces caso omiso.</p>\
-        \
-        <p class='transient'>Click <a href='hub'>this link to\
-        continue...</a></p>", {
+        <p>Tu madre te ha dicho que va a llover, puedes coger el <a href='./paraguas' class='once'>paraguas</a>, o bien tienes prisa y haces caso omiso</p>\
+        <p class='transient'><a href='situation2'>Pulsa para continuar</a></p>", {
             actions: {
                 'paraguas': function(character, system, action) {
                     system.setQuality("paraguas", true);
@@ -56,6 +54,35 @@ undum.game.situations = {
     // Situation type. This is a neat approach to generate text by
     // looking it up in the HTML document. For static text that makes
     // more sense than writing it longhand.
+    situation2: new undum.SimpleSituation(
+        "<h1>Camino a clase</h1>\
+        <p>Vas caminando por la calle con tu compañero de clase y veis un\
+        maletín colgado de la rama de un árbol.</p>", {
+            enter: function(character, system, from) {
+                if (character.qualities.paraguas) {
+                    system.doLink("puzzle1");
+                } else {
+                    system.doLink("retroceder1");
+                }
+            }
+        }
+
+    ),
+
+    puzzle1: new undum.SimpleSituation(
+        "<h1>Primer puzzle</h1>\
+        <p>Con el paraguas estás a punto de cogerlo pero necesitas subirte a algo para\
+        poder llegar finalmente.</p>"
+    ),
+
+    retroceder1: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <p>No obstante, como no le hiciste caso a tu madre\
+            no puedes alcanzarlo sin el paraguas.</p>\
+            <p>Será mejor que pulses aquí y volverás a despertarte hoy. <a class='transient' href='start'>Retroceder</a>.</p>\
+        </div>"
+    ),
+
     situations: new undum.Situation({
         enter: function(character, system, from) {
             system.write($("#s_situations").html());
@@ -64,6 +91,7 @@ undum.game.situations = {
         optionText: "What Undum Games are Made Of",
         displayOrder: 1
     }),
+
     todo: new undum.SimpleSituation(
         "<p>Two things can happen in a situation. The character either\
         <a href='links'>leaves</a> the situation and enters another one, or\
