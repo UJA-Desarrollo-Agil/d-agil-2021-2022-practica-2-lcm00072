@@ -237,6 +237,11 @@ img.paraguas {
     width: 20%;
 }
 
+div.acertijo {
+    padding: 2rem;
+    font-style: italic;
+}
+
 #toolbar {
     display: none;
 }

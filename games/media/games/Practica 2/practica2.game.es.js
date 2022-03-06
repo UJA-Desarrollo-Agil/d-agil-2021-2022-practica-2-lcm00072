@@ -70,16 +70,53 @@ undum.game.situations = {
     ),
 
     puzzle1: new undum.SimpleSituation(
-        "<h1>Primer puzzle</h1>\
-        <p>Con el paraguas estás a punto de cogerlo pero necesitas subirte a algo para\
-        poder llegar finalmente.</p>"
+        "<div class='transient'>\
+        <h1>Primer puzzle</h1>\
+        <div class='acertijo'\
+        <p>Con el paraguas lográs alcanzarlo pero el maletín tiene un candado por lo\
+        que necesitarás averiguar la clave para poder abrirlo. Justo por la parte trasera\
+        parece que pone un acertijo</p>\
+        <p>¿Cuántas veces se le puede restar 1 al número 100?</p>\
+        </div>\
+        <p>Ahora te toca seleccionar la clave correcta, las claves que se te ocurren son:\
+        <br>\
+        <a class='once' href='retroceder2'>100 veces</a>\
+        <br>\
+        <a class='once' href='situacion2'>1 veces</a>\
+        <br>\
+        <a class='once' href='retroceder3'>99 veces</a>\
+        </p>\
+        </div>"
     ),
 
     retroceder1: new undum.SimpleSituation(
         "<div class='transient'>\
+        <hr>\
         <p>No obstante, como no le hiciste caso a tu madre\
             no puedes alcanzarlo sin el paraguas.</p>\
             <p>Será mejor que pulses aquí y volverás a despertarte hoy. <a class='transient' href='start'>Retroceder</a>.</p>\
+        </div>"
+    ),
+
+    retroceder2: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <hr>\
+        <p>Bueno parece ser que no es tu día,\
+            será mejor que vuelvas a levantarte hoy. <a class='transient' href='start'>Retroceder</a>.</p>\
+        </div>"
+    ),
+
+    retroceder3: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <p>Bueno parece ser que no es tu día,\
+            será mejor que vuelvas a levantarte hoy. <a class='transient' href='start'>Retroceder</a>.</p>\
+        </div>"
+    ),
+
+    situacion2: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <p>Perfecto,\
+            efectivamente si le restas 1 al número 100 pasa a ser 99 y dejaría de ser el 100. <a class='transient' href='start'>Retroceder</a>.</p>\
         </div>"
     ),
 
