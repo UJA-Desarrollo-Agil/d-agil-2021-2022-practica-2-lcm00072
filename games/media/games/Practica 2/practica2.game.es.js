@@ -45,7 +45,6 @@ undum.game.situations = {
     ),
 
 
-
     // NB: The 'hub' situation which is the main list of topics, is
     // defined wholly in the HTML file, and doesn't have an entry in
     // the game.situations dictionary in this file.
@@ -60,7 +59,7 @@ undum.game.situations = {
         maletín colgado de la rama de un árbol.</p>", {
             enter: function(character, system, from) {
                 if (character.qualities.paraguas) {
-                    system.doLink("puzzle1");
+                    system.doLink("puzzlecandado");
                 } else {
                     system.doLink("retroceder1");
                 }
@@ -69,7 +68,7 @@ undum.game.situations = {
 
     ),
 
-    puzzle1: new undum.SimpleSituation(
+    puzzlecandado: new undum.SimpleSituation(
         "<div class='transient'>\
         <h1>Primer puzzle</h1>\
         <div class='acertijo'\
@@ -80,27 +79,13 @@ undum.game.situations = {
         </div>\
         <p>Ahora te toca seleccionar la clave correcta, las claves que se te ocurren son:\
         <br>\
-        <a class='once' href='retroceder2'>100 veces</a>\
+        <a class='once' href='final1'>100 veces</a>\
         <br>\
-        <a class='once' href='situacion2'>1 veces</a>\
+        <a class='once' href='situacionentradas'>1 veces</a>\
         <br>\
-        <a class='once' href='retroceder3'>99 veces</a>\
+        <a class='once' href='final2'>99 veces</a>\
         </p>\
         </div>"
-    ),
-
-    noParaguas: new undum.SimpleSituation(
-        "<div class='transient'>\
-        <hr>\
-            <p><a href='./quitarParaguas'>Volver</a>.</p>\
-        </div>", {
-            actions: {
-                'quitarParaguas': function(character, system, action) {
-                    system.setQuality("paraguas", false);
-                    system.setCharacterText("<p></p>");
-                }
-            }
-        }
     ),
 
     retroceder1: new undum.SimpleSituation(
@@ -108,28 +93,27 @@ undum.game.situations = {
         <hr>\
         <p>No obstante, como no le hiciste caso a tu madre\
             no puedes alcanzarlo sin el paraguas.</p>\
-            <p>Será mejor que pulses aquí y volverás a despertarte hoy. <a href='start'>Retroceder</a>.</p>\
+        <h1>FIN</h1>\
         </div>"
     ),
 
-    retroceder2: new undum.SimpleSituation(
+    final1: new undum.SimpleSituation(
         "<div class='transient'>\
         <hr>\
-        <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy. <a href='noParaguas'>Volver</a>.</p>\
+        <p>No obstante, como no le hiciste caso a tu madre\
+            no puedes alcanzarlo sin el paraguas.</p>\
+        <h1>FIN</h1>\
         </div>"
     ),
 
-    retroceder3: new undum.SimpleSituation(
+    final2: new undum.SimpleSituation(
         "<div class='transient'>\
         <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy. <a href='noParaguas'>Volver</a>.</p>\
+            será mejor que vuelvas a levantarte hoy. <a href='noparaguas'>Volver</a>.</p>\
         </div>"
     ),
 
-
-
-    situacion2: new undum.SimpleSituation(
+    situacionentradas: new undum.SimpleSituation(
         "<div class='transient'>\
         <p>Perfecto,\
             efectivamente si le restas 1 al número 100 pasa a ser 99 y dejaría de ser el 100.\
@@ -138,24 +122,24 @@ undum.game.situations = {
             Debates con tu compañero si devolverlo a la persona a la que pertenece.\
             Finalmente decidís:</p>\
         <ul>\
-        <li><a href=devolverMaletin>Decidís ir a la casa del dueño a devolverlo todo</a>.</li>\
-        <li><a href=robarEntradas>Cogeis las entradas y decidís dejar el maletín dónde estaba</a></li>\
+        <li><a href='devolvermaletin'>Decidís ir a la casa del dueño a devolverlo todo</a></li>\
+        <li><a href='robarentradas'>Cogeis las entradas y decidís dejar el maletín dónde estaba</a></li>\
         </ul>\
         </div>"
     ),
 
-    devolverMaletin: new undum.SimpleSituation(
+    devolvermaletin: new undum.SimpleSituation(
         "<div class='transient'>\
         <hr>\
         <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy. <a class='transient' href='noParaguas'>Volver</a>.</p>\
+            será mejor que vuelvas a levantarte hoy.</p>\
         </div>"
     ),
 
-    robarEntradas: new undum.SimpleSituation(
+    robarentradas: new undum.SimpleSituation(
         "<div class='transient'>\
         <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy. <a class='transient' href='start'>Retroceder</a>.</p>\
+            será mejor que vuelvas a levantarte hoy.</p>\
         </div>"
     ),
 
