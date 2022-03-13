@@ -178,7 +178,15 @@ undum.game.situations = {
         </div>"
     ),
 
-
+    recibirentradas: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <h1>Concierto</h1>\
+        <img #respuesta src='media/img/respuesta_puzzle.jpeg' class='puzzle'>\
+        <p>Conseguís las entradas y finalmente podeis ir al concierto. \
+        Lo pasais genial e incluso conseguís unas camisetas firmadas. \
+        <a href='volvercasa'>Pulsa para volver a casa</a></p>\
+        </div>"
+    ),
 
 
 
