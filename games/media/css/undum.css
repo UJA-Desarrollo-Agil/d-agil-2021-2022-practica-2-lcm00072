@@ -237,6 +237,10 @@ img.paraguas {
     width: 20%;
 }
 
+img.puzzle {
+    width: 80%;
+}
+
 div.acertijo {
     padding: 2rem;
     font-style: italic;

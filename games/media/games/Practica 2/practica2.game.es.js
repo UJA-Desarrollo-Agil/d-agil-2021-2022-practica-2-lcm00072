@@ -99,9 +99,8 @@ undum.game.situations = {
 
     final1: new undum.SimpleSituation(
         "<div class='transient'>\
-        <hr>\
-        <p>No obstante, como no le hiciste caso a tu madre\
-            no puedes alcanzarlo sin el paraguas.</p>\
+        <p>Bueno parece ser que no es tu día,\
+            será mejor que vuelvas rápido a la clase de matemáticas.</p>\
         <h1>FIN</h1>\
         </div>"
     ),
@@ -109,7 +108,8 @@ undum.game.situations = {
     final2: new undum.SimpleSituation(
         "<div class='transient'>\
         <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy. <a href='noparaguas'>Volver</a>.</p>\
+            será mejor que vuelvas rápido a la clase de matemáticas.</p>\
+        <h1>FIN</h1>\
         </div>"
     ),
 
@@ -130,18 +130,55 @@ undum.game.situations = {
 
     devolvermaletin: new undum.SimpleSituation(
         "<div class='transient'>\
+        <br>\
+        <h1>Buena decisión</h1>\
         <hr>\
-        <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy.</p>\
+        <p>Llegas a la casa del dueño y por haberle ayudado a encontrar el maletín os quiere regalar \
+        unas entradas pero os propone un puzzle para comprobar si habeís sido vosotros los que habeís \
+        descrifrado el del candado. <a href='puzzlefinal'>Realizar puzzle</a></p>\
         </div>"
     ),
 
     robarentradas: new undum.SimpleSituation(
         "<div class='transient'>\
-        <p>Bueno parece ser que no es tu día,\
-            será mejor que vuelvas a levantarte hoy.</p>\
+        <h1>Mala decisión</h1>\
+        <hr>\
+        <p>Ibas bien,\
+            la policía te ha visto urgando en el maletín y esta noche la vas a pasar en el calabozo.\
+            Te quedas sin ir al concierto.</p>\
         </div>"
     ),
+
+    puzzlefinal: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <h1>Puzzle</h1>\
+        <hr>\
+        <img #puzzle src='media/img/puzzle.jpeg' class='puzzle'>\
+        <ul>\
+        <li><a href='final3'>Escalón número 13</a></li>\
+        <li><a href='final4'>Escalón número 5</a></li>\
+        <li><a href='recibirentradas'>Escalón número 9</a></li>\
+        </ul>\
+        </div>"
+    ),
+
+    final3: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <h1>Respuesta</h1>\
+        <img #respuesta src='media/img/respuesta_puzzle.jpeg' class='puzzle'>\
+        <h1>FIN</h1>\
+        </div>"
+    ),
+
+    final4: new undum.SimpleSituation(
+        "<div class='transient'>\
+        <h1>Respuesta</h1>\
+        <img #respuesta src='media/img/respuesta_puzzle.jpeg' class='puzzle'>\
+        <h1>FIN</h1>\
+        </div>"
+    ),
+
+
 
 
 
