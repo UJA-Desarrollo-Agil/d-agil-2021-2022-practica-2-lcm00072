@@ -56,3 +56,15 @@ Existen varias escenas en las que según las acciones que hayas tomado anteriorm
 <img width="872" alt="Captura de pantalla 2022-03-15 a las 17 12 52" src="https://user-images.githubusercontent.com/99446551/158423961-830b1048-870a-4cd2-b87d-eabb9b7f1671.png">
 
 *Imagen 4 - El tablero se encuentra con todas las tareas completadas*
+
+## 4. GitHub
+
+Para el seguimiento de GitHub, se ha usado el bot de Telegram en el que puedes ser notificado cuándo un compañero del proyecto realiza un commit.
+
+![Github telegram](https://user-images.githubusercontent.com/99446551/158426156-62a5b28e-2f7f-40e7-b66c-105fe6c4dea1.jpeg)
+
+*Imagen 4 - Bot de telegram con el reporte de commits realizados*
+
+## 5. Conclusión
+
+El desarrollo de esta práctica ha sido realmente útil para gestionar las versiones del proyecto mediante git y a parte de la utilidad que nos proporcionan los tableros Kanban para las tareas. Sin embargo, el desarrollo de un proyecto con el framework de Undum no es lo más ideal, ya que se puede llegar a complicar y volver en una mala experiencia cuando el objetivo real de la práctica es realizar un correcto desarrollo ágil mediante el uso correcto de las herramientas propuestas.
