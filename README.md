@@ -1,140 +1,70 @@
-# Undum
+# Práctica 2 Desarrollo Ágil - Undum
 
-Undum is a game framework for building a sophisticated form of
-hypertext interactive fiction.
+Los requisitos de esta práctica son desarrollar una aventura interactiva mediante el uso del framework Undum. Para ello se desarrollará con la ayuda de herramientas para la gestión de las tareas como Trello y un portal de git como GitHub.
 
-If that means nothing to you, then let's go back a few steps. Remember
-those Choose Your Own Adventure, or Fighting Fantasy books? Where you
-got to choose what your character does next? Well if you think of that
-in a web-page you have hypertext interactive fiction, or HIF. Instead
-of turning to a particular page, you click a link, and the next bit of
-content appears.
+# Datos
 
-The problem is that those kinds of games are pretty limited. Every
-time the player does something, the story could go in different
-directions. So the author has to either write masses of branches, or
-else the decisions you make as a player have to be relatively short
-lived. If you played CYOA books you'll know that the wrong move either
-ended the story pretty quickly, or else it didn't really matter what
-you did because you'd end up at the same place.
+* Realizado por: Luis Correa Martínez
+* Curso 2021/2022
 
-To beat this limitation, Undum allows you to make the output
-dynamic. It allows you to keep track of what has happened to the
-character (any kinds of data, in fact), and to then change the text
-that gets output accordingly. Effectively it is like writing a CYOA
-page that is different each time you read it. This allows for far
-richer and more rewarding game design.
+# Guión
 
-Undum is a pure client client-side library. It consists of a HTML file
-and three Javascript files. The HTML file uses a nice bit of styling,
-so there's a bunch of CSS and images in the default package too, but
-that can be replaced if you want. To create your own game, you edit
-the HTML file a little (mainly just changing the title and author),
-and edit one of the Javascript files.
+1. Introducción
+2. Descripción del juego
+3. Trello
+4. GitHub 
+5. Conclusión
 
-Because the game is written in Javascript, you get the full power of a
-dynamic and efficient programming language. This isn't a CYOA
-scripting system with limited functionality. You can take control of
-anything you want. Or you can just keep things simple using a bunch of
-simple functions provided by Undum.
+## 1. Introducción
 
+Esta es una práctica para la asignatura Desarrollo Ágil. Se ha usado como metodología Kanban, en la que mediante el uso de los tableros se ha hecho un seguimiento y un control de las tareas a realizar. El fin de esta práctica es hacer un uso correcto de los tableros a la vez que poder sacar provecho al sistema de control de versiones que nos brinda git. Para el desarrollo de las versiones del proyecto, se han distinguido 3 ramas:
 
-## Compatibility
+  * Development: Rama en la cuál se lleva el desarrollo de las implementaciones.
+  * Release: Rama en la que se mergearan los cambios de la rama de development cuando estén en un versión estable.
+  * Master: Rama principal de la cuál nacen el resto de ramas.
 
-Undum is designed for HTML5 and CSS3 browsers. It has been tested on
-Firefox 3.6, Chrome 5, and Safari 5. Older browsers may work okay too,
-but some of the animation won't work, the styles may render poorly,
-and saving and loading of games is unlikely to work. Anyone who wants
-to hack around with it and make it work more widely is welcome. Just
-fork this project on Github.
+## 2. Descripción del juego
 
-The local storage system on some browsers does not work when loading a
-page from your hard drive. To test your game when developing it, you
-may want to start up a simple local webserver. I have found that
-Chrome seems to reliably provide local storage for local
-development. It also has excellent Javascript debugging tools.
+En el desarrollo de esta historia, eres un habitante de la ciudad de Jaén. Tu grupo favorito (AC/DC) va a tocar en la ciudad pero se han acabado las entradas. Podrás tener la opción de ir al concierto según las acciones que tomes a cabo, pero recuerda ser siempre una persona honesta.
 
+Existen varias escenas en las que según las acciones que hayas tomado anteriormente podrás avanzar y continuar con los distintos puzzles o bien se finalizará la aventura y deberás reiniciar.
 
-## Getting Started
+## 3. Trello
 
-1. Download Undum. Use the 'download zip' link in the right column of
-   this page.
+### URL del tablero: https://trello.com/b/50P7p4yv/práctica-2
 
-2. Unzip Undum somewhere on your hard-drive.
+### Capturas
 
-3. Open games/tutorial.html in your browser, and play through the tutorial.
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 09 40" src="https://user-images.githubusercontent.com/99446551/158422887-30db5341-8653-49ff-a7a1-f6c5ca480390.png">
 
-4. Copy games/tutorial.html to a file that reflects your game name.
+*Imagen 1 - Se puede observar el tablero en estado inicial con las tareas a desarrollar*
 
-5. Edit your HTML file and add the title, author and description of
-   the game you want to write. At the bottom of the file change the
-   name of `tutorial.game.js` to something else (by convention
-   *your-game-name*`.game.js`.
+---
 
-6. Copy `tutorial.game.js` to the file name you chose in the last
-   step. Open it and begin creating your game.
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 11 40" src="https://user-images.githubusercontent.com/99446551/158423353-6e77b1c6-8598-4add-90db-7f1991323bce.png">
 
+*Imagen 2 - El tablero se encuentran con todas las tareas iniciales de preparación del proyecto hechas*
 
-Reference documentation, including full API details, is at
-[http://idmillington.github.io/undum/](http://idmillington.github.io/undum/),
-and is also included in the repository.
+---
 
-The source code for all the files is also heavily commented, so if you
-get stuck, go in and read it.
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 12 28" src="https://user-images.githubusercontent.com/99446551/158423551-d8ef7a12-50c1-4a46-b2f1-f9b3be523f79.png">
 
+*Imagen 3 - El tablero dispone de únicamente una tarea de desarrollo por hacer*
 
-## Deploying
+---
 
-To deploy your game, just upload your HTML file and the `media` folder
-to your webserver. You can serve several games with the same look and
-feel from the same directory. You need a different HTML file for each
-game, and each one should load the correct `.game.js` file at the
-end. Add any media you need for your game (images, audio, video), and
-the remaining files will be reused.
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 12 52" src="https://user-images.githubusercontent.com/99446551/158423961-830b1048-870a-4cd2-b87d-eabb9b7f1671.png">
 
-For example, if you had 3 games: `episode1`, `episode2`, and
-`christmas-special`. You'd have a directory structure:
+*Imagen 4 - El tablero se encuentra con todas las tareas completadas*
 
-    episode1.html
-    episode2.html
-    christmas-special.html
-    media/
-        css/ ...
-        img/ ...
-        js/
-            jquery-1.4.2.min.js
-            undum.js
-        games/
-            episode1/
-                episode1.game.js
-                ... media for episode 1 ...
-            episode2/
-                episode2.game.js
-                ... media for episode 1 ...
-            christmas-special/
-                christmas-special.game.js
-                ... media for christmas special ...
+## 4. GitHub
 
-This assumes you use the same directory lay out that I do. You are
-welcome to change things around, of course, as long as you work and
-change the references.
+Para el seguimiento de GitHub, se ha usado el bot de Telegram en el que puedes ser notificado cuándo un compañero del proyecto realiza un commit.
 
+![Github telegram](https://user-images.githubusercontent.com/99446551/158426156-62a5b28e-2f7f-40e7-b66c-105fe6c4dea1.jpeg)
 
-## Undum
+*Imagen 4 - Bot de telegram con el reporte de commits realizados*
 
-The name `undum` came from a little project that preceded this code
-base. In 2008 I put together a simple browser based game. It was
-narrative, but used the grind-based mechanics of games such as
-Farmville and Mafia Wars. Because of the grinding, I called it
-Carborundum, which I found I couldn't type at speed, so it became
-Undum. The code has changed out of all recognition since them, as the
-grind-based game moved to Flash. But the name stuck for the Javascript
-framework.
+## 5. Conclusión
 
-
-## License
-
-The code, documentation, styles, design and images are all distributed
-under the MIT license. This permits you to modify and use them, even
-for commercial use. A copy of the MIT license is found in the LICENSE
-file.
+El desarrollo de esta práctica ha sido realmente útil para gestionar las versiones del proyecto mediante git y a parte de la utilidad que nos proporcionan los tableros Kanban para las tareas. Sin embargo, el desarrollo de un proyecto con el framework de Undum no es lo más ideal, ya que se puede llegar a complicar y volver en una mala experiencia cuando el objetivo real de la práctica es realizar un correcto desarrollo ágil mediante el uso correcto de las herramientas propuestas.
