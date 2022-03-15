@@ -23,10 +23,36 @@ Esta es una práctica para la asignatura Desarrollo Ágil. Se ha usado como meto
   * Release: Rama en la que se mergearan los cambios de la rama de development cuando estén en un versión estable.
   * Master: Rama principal de la cuál nacen el resto de ramas.
 
-
 ## 2. Descripción del juego
 
 En el desarrollo de esta historia, eres un habitante de la ciudad de Jaén. Tu grupo favorito (AC/DC) va a tocar en la ciudad pero se han acabado las entradas. Podrás tener la opción de ir al concierto según las acciones que tomes a cabo, pero recuerda ser siempre una persona honesta.
 
 Existen varias escenas en las que según las acciones que hayas tomado anteriormente podrás avanzar y continuar con los distintos puzzles o bien se finalizará la aventura y deberás reiniciar.
 
+## 3. Trello
+
+### URL del tablero: https://trello.com/b/50P7p4yv/práctica-2
+
+### Capturas
+
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 09 40" src="https://user-images.githubusercontent.com/99446551/158422887-30db5341-8653-49ff-a7a1-f6c5ca480390.png">
+
+*Imagen 1 - Se puede observar el tablero en estado inicial con las tareas a desarrollar*
+
+---
+
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 11 40" src="https://user-images.githubusercontent.com/99446551/158423353-6e77b1c6-8598-4add-90db-7f1991323bce.png">
+
+*Imagen 2 - El tablero se encuentran con todas las tareas iniciales de preparación del proyecto hechas*
+
+---
+
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 12 28" src="https://user-images.githubusercontent.com/99446551/158423551-d8ef7a12-50c1-4a46-b2f1-f9b3be523f79.png">
+
+*Imagen 3 - El tablero dispone de únicamente una tarea de desarrollo por hacer*
+
+---
+
+<img width="872" alt="Captura de pantalla 2022-03-15 a las 17 12 52" src="https://user-images.githubusercontent.com/99446551/158423961-830b1048-870a-4cd2-b87d-eabb9b7f1671.png">
+
+*Imagen 4 - El tablero se encuentra con todas las tareas completadas*
